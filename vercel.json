@@ -2,13 +2,26 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "headers": [
-    { "source": "/(img|fonts)/(.*)", "headers": [{ "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }] }
+    {
+      "source": "/(img|fonts)/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    }
   ],
   "redirects": [
-    { "source": "/download", "destination": "https://apps.apple.com/app/id6826678389", "permanent": false },
-    { "source": "/app", "destination": "https://apps.apple.com/app/id6826678389", "permanent": false },
-    { "source": "/privacy", "destination": "https://baynestudio.com/barzi/privacy", "permanent": false },
-    { "source": "/terms", "destination": "https://baynestudio.com/barzi/terms", "permanent": false },
-    { "source": "/support", "destination": "mailto:hello@baynestudio.com", "permanent": false }
+    {
+      "source": "/download",
+      "destination": "https://apps.apple.com/app/id6826678389",
+      "permanent": false
+    },
+    {
+      "source": "/app",
+      "destination": "https://apps.apple.com/app/id6826678389",
+      "permanent": false
+    }
   ]
 }

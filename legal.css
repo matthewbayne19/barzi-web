@@ -1,0 +1,29 @@
+@font-face{font-family:"DM Serif Display";src:url(/fonts/DMSerifDisplay_400Regular.ttf) format("truetype");font-display:swap}
+@font-face{font-family:"DM Sans";src:url(/fonts/DMSans_400Regular.ttf) format("truetype");font-weight:400;font-display:swap}
+@font-face{font-family:"DM Sans";src:url(/fonts/DMSans_600SemiBold.ttf) format("truetype");font-weight:600;font-display:swap}
+:root{--bg:#0D0E0F;--surface:#17191B;--line:#2A2D31;--text:#ECEDEE;--muted:#A4A8AC;--faint:#878C91;--copper:#D58D5E}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:var(--bg)}
+body{color:var(--text);font-family:"DM Sans",-apple-system,sans-serif;font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
+.glow{position:absolute;inset:0 0 auto 0;height:500px;pointer-events:none;background:radial-gradient(ellipse 60% 60% at 50% -20%,rgba(213,141,94,.22),transparent 70%)}
+.wrap{position:relative;max-width:720px;margin:0 auto;padding:0 20px}
+nav{display:flex;align-items:center;justify-content:space-between;padding:22px 0 50px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:inherit;font-family:"DM Serif Display",serif;font-size:26px}
+.brand img{width:24px;height:auto}
+nav .get{font-size:15px;font-weight:600;text-decoration:none;color:inherit;padding:8px 14px;border-radius:12px;background:var(--surface);border:1px solid var(--line)}
+h1{font-family:"DM Serif Display",serif;font-weight:400;font-size:clamp(40px,7vw,56px);line-height:1.05;letter-spacing:-.01em;margin-bottom:10px}
+.updated{color:var(--faint);font-size:15px;margin-bottom:28px}
+.intro{color:var(--muted);font-size:18px;margin-bottom:40px}
+section{border-top:1px solid var(--line);padding:28px 0;display:grid;grid-template-columns:52px 1fr;gap:4px 16px}
+section .n{font-family:"DM Serif Display",serif;color:var(--copper);font-size:20px;line-height:1.4}
+h2{font-family:"DM Serif Display",serif;font-weight:400;font-size:26px;line-height:1.2;margin-bottom:10px}
+section p,section li{color:var(--muted)}
+section p+p,section ul+p,section p+ul{margin-top:12px}
+section ul{list-style:none;display:grid;gap:10px}
+b{color:var(--text);font-weight:600}
+a{color:var(--copper)}
+footer{border-top:1px solid var(--line);margin-top:30px;padding:28px 0 50px;color:var(--faint);font-size:14px;display:flex;flex-wrap:wrap;gap:12px 22px;justify-content:space-between}
+footer nav{padding:0;display:flex;gap:20px}
+footer a{color:inherit;text-decoration:none}
+footer a:hover{color:var(--text)}
+@media (max-width:560px){.wrap{padding:0 16px}section{grid-template-columns:1fr}nav{padding-bottom:36px}}
