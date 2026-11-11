@@ -14,6 +14,16 @@
   ],
   "redirects": [
     {
+      "source": "/portal",
+      "destination": "https://bars.gobarzi.com",
+      "permanent": false
+    },
+    {
+      "source": "/portal/:path*",
+      "destination": "https://bars.gobarzi.com",
+      "permanent": false
+    },
+    {
       "source": "/download",
       "destination": "https://apps.apple.com/app/id6826678389",
       "permanent": false
