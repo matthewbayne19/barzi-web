@@ -1,6 +1,6 @@
-@font-face{font-family:"DM Serif Display";src:url(/fonts/DMSerifDisplay_400Regular.ttf) format("truetype");font-display:swap}
-@font-face{font-family:"DM Sans";src:url(/fonts/DMSans_400Regular.ttf) format("truetype");font-weight:400;font-display:swap}
-@font-face{font-family:"DM Sans";src:url(/fonts/DMSans_600SemiBold.ttf) format("truetype");font-weight:600;font-display:swap}
+@font-face{font-family:"DM Serif Display";src:url(/fonts/DMSerifDisplay_400Regular.woff2) format("woff2");font-display:swap}
+@font-face{font-family:"DM Sans";src:url(/fonts/DMSans_400Regular.woff2) format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:"DM Sans";src:url(/fonts/DMSans_600SemiBold.woff2) format("woff2");font-weight:600;font-display:swap}
 :root{--bg:#0D0E0F;--surface:#17191B;--line:#2A2D31;--text:#ECEDEE;--muted:#A4A8AC;--faint:#878C91;--copper:#D58D5E}
 *{box-sizing:border-box;margin:0;padding:0}
 html,body{background:var(--bg)}
