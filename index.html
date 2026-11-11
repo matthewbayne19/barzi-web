@@ -112,8 +112,7 @@ h2{font-family:var(--serif);font-weight:400;font-size:clamp(34px,4.6vw,54px);lin
 /* sticky download bar (phones only) */
 .sticky{position:fixed;left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom));z-index:20;display:none;align-items:center;gap:12px;
   background:rgba(23,25,27,.92);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border:1px solid var(--line);border-radius:16px;padding:10px 10px 10px 12px;
-  box-shadow:0 12px 30px rgba(0,0,0,.5);transform:translateY(140%);transition:transform .25s ease}
-.sticky.show{transform:none}
+  box-shadow:0 12px 30px rgba(0,0,0,.5)}
 .sticky img{width:40px;height:40px;border-radius:10px;flex:none}
 .sticky .txt{flex:1;min-width:0;line-height:1.25}
 .sticky .txt b{display:block;font-family:var(--serif);font-weight:400;font-size:19px}
@@ -156,7 +155,7 @@ footer{border-top:1px solid var(--line);padding:34px 0 50px;color:var(--faint);f
   .bars{flex-direction:column;align-items:flex-start}
   .btn-small{display:none}
   .sticky{display:flex}
-  footer{padding-bottom:110px}
+  footer{padding-bottom:calc(110px + env(safe-area-inset-bottom))}
 }
 </style>
 </head>
@@ -293,20 +292,10 @@ footer{border-top:1px solid var(--line);padding:34px 0 50px;color:var(--faint);f
   </div>
 </footer>
 
-<div class="sticky" id="sticky" aria-hidden="true">
-  <img src="/img/icon-192.png" alt="" width="40" height="40" loading="lazy">
+<div class="sticky" id="sticky">
+  <img src="/img/icon-192.png" alt="" width="40" height="40">
   <div class="txt"><b>barzi</b><span>What's up tonight</span></div>
-  <a class="btn btn-store" href="https://apps.apple.com/app/id6826678389" tabindex="-1">Get the app</a>
+  <a class="btn btn-store" href="https://apps.apple.com/app/id6826678389">Get the app</a>
 </div>
-<script>
-(function(){var bar=document.getElementById('sticky');if(!bar||!('IntersectionObserver' in window))return;
-var ctas=document.querySelectorAll('.cta-row,.final'),seen=new Set();
-var io=new IntersectionObserver(function(es){es.forEach(function(e){e.isIntersecting?seen.add(e.target):seen.delete(e.target)});
-var past=document.querySelector('.cta-row').getBoundingClientRect().bottom<0;var on=past&&seen.size===0;
-bar.classList.toggle('show',on);bar.setAttribute('aria-hidden',on?'false':'true');});
-ctas.forEach(function(c){io.observe(c)});
-addEventListener('scroll',function(){var past=document.querySelector('.cta-row').getBoundingClientRect().bottom<0;var on=past&&seen.size===0;bar.classList.toggle('show',on)},{passive:true});
-})();
-</script>
 </body>
 </html>
