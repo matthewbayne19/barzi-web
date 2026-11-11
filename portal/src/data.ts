@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useState } from 'react';
-import { supabase, VENUE_COLUMNS, type EventRow, type FlyerRow, type HoursRow, type SpecialRow, type Venue } from './supabase';
+import { supabase, VENUE_COLUMNS, type EventRow, type FeatureRow, type FlyerRow, type HoursRow, type SpecialRow, type Venue } from './supabase';
 
 export type BarData = {
   venue: Venue;
@@ -7,6 +7,7 @@ export type BarData = {
   specials: SpecialRow[];
   hours: HoursRow[];
   flyers: FlyerRow[];
+  features: FeatureRow[];
 };
 
 export type Bar = {
@@ -23,14 +24,15 @@ export function useBar(venueId: string | null): Bar {
 
   const reload = useCallback(async () => {
     if (!venueId) return;
-    const [v, e, s, h, f] = await Promise.all([
+    const [v, e, s, h, f, ft] = await Promise.all([
       supabase.from('venues').select(VENUE_COLUMNS).eq('id', venueId).single(),
       supabase.from('events').select('*').eq('venue_id', venueId).order('start_time', { nullsFirst: false }),
       supabase.from('specials').select('*').eq('venue_id', venueId).order('start_time', { nullsFirst: false }),
       supabase.from('venue_hours').select('*').eq('venue_id', venueId),
       supabase.from('venue_flyers').select('*').eq('venue_id', venueId).order('created_at', { ascending: false }),
+      supabase.from('venue_features').select('*').eq('venue_id', venueId),
     ]);
-    const err = v.error ?? e.error ?? s.error ?? h.error ?? f.error;
+    const err = v.error ?? e.error ?? s.error ?? h.error ?? f.error ?? ft.error;
     if (err) { setError(err.message); return; }
     setError(null);
     setData({
@@ -39,6 +41,7 @@ export function useBar(venueId: string | null): Bar {
       specials: (s.data ?? []) as SpecialRow[],
       hours: (h.data ?? []) as HoursRow[],
       flyers: (f.data ?? []) as FlyerRow[],
+      features: (ft.data ?? []) as FeatureRow[],
     });
   }, [venueId]);
 

@@ -53,7 +53,10 @@ h1.hero{font-size:32px;margin-top:28px}
 .empty{border:1px dashed var(--line);border-radius:12px;padding:16px;color:var(--muted);font-size:14px;line-height:1.5}
 
 label.field{display:flex;flex-direction:column;gap:6px;font-size:14px;font-weight:600}
-input.text,select.text,textarea.text{height:48px;border-radius:12px;border:1px solid var(--line);background:var(--surface);color:var(--text);padding:0 14px;font-size:16px;width:100%}
+input.text,select.text,textarea.text{height:48px;border-radius:12px;border:1px solid var(--line);background:var(--surface);color:var(--text);padding:0 14px;font-size:16px;width:100%;min-width:0;max-width:100%;display:block}
+input.text[type=time],input.text[type=date]{-webkit-appearance:none;appearance:none;text-align:left;line-height:46px}
+input.text::-webkit-date-and-time-value{text-align:left}
+.field{min-width:0}
 textarea.text{height:auto;min-height:80px;padding:12px 14px;resize:vertical}
 input.text:focus,select.text:focus,textarea.text:focus{border-color:var(--copper);outline:none}
 .hint{font-size:13px;font-weight:400;color:var(--faint)}

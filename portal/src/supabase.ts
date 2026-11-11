@@ -30,6 +30,11 @@ export type SpecialRow = {
   id: string; venue_id: string; kind: string; title: string;
   days: string[]; start_time: string | null; end_time: string | null;
 };
+export type FeatureRow = {
+  venue_id: string; amenity: string; quantity: number | null; price: number | null; cash_only: boolean | null;
+  league_days: string[]; heated: boolean | null; covered: boolean | null; open_months: number[]; tags: string[]; source: string;
+};
+
 export type HoursRow = {
   id: string; venue_id: string; day_of_week: string;
   opens_at: string | null; closes_at: string | null; is_closed: boolean;

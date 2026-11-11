@@ -10,6 +10,7 @@ import { SpecialEditor, Specials } from './pages/Specials';
 import { Hours } from './pages/Hours';
 import { Flyers } from './pages/Flyers';
 import { Details } from './pages/Details';
+import { Features } from './pages/Features';
 import { StatsPage } from './pages/Stats';
 
 const PICKED = 'barzi-bars:venue';
@@ -107,6 +108,7 @@ function SignedIn({ session }: { session: Session }) {
       case 'specials': page = id ? <SpecialEditor key={id} bar={bar} id={id} /> : <Specials bar={bar} />; break;
       case 'hours': page = <Hours key={bar.data.venue.id} bar={bar} />; break;
       case 'flyers': page = <Flyers bar={bar} />; break;
+      case 'features': page = <Features key={bar.data.venue.id} bar={bar} />; break;
       case 'details': page = <Details key={bar.data.venue.id} bar={bar} />; break;
       case 'stats': page = <StatsPage bar={bar} />; break;
       default: page = <Home data={bar.data} manyBars={bars.length > 1} />;

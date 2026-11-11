@@ -109,6 +109,7 @@ export function Home({ data, manyBars }: { data: BarData; manyBars: boolean }) {
         {row('specials', 'Specials', String(data.specials.length))}
         {row('hours', 'Hours and closures', hoursLine(data))}
         {row('flyers', 'Flyers', liveFlyers ? `${liveFlyers} showing` : 'None')}
+        {row('features', 'Features', data.features.length ? `${data.features.length} on` : 'Pool, darts, patio…')}
         {row('details', 'Details and links', 'Phone, website, Instagram')}
       </nav>
 
