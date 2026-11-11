@@ -79,7 +79,7 @@ export function SignIn() {
       <div className="grow" />
       <p className="small center">
         No password. Not set up yet? Email <a href="mailto:hello@baynestudio.com?subject=barzi%20for%20bars">hello@baynestudio.com</a> and we'll add your bar.
-        <br /><a href="https://www.gobarzi.com/terms">Terms</a> · <a href="https://www.gobarzi.com/privacy">Privacy</a>
+        <br />By signing in you agree to the <a href="https://www.gobarzi.com/terms#bars">Terms</a> and <a href="https://www.gobarzi.com/privacy#bars">Privacy Policy</a>. <a href="https://www.gobarzi.com/support#bars">Help</a>
       </p>
     </div>
   );
