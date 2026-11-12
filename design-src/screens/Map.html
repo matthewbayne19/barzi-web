@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Map bar selected</title>
+<link rel="stylesheet" href="gig.css"><link rel="stylesheet" href="fonts.css">
+</head>
+<body>
+<style>body{margin:0}</style>
+<div class="scr">
+  <div class="map"><div class="grid"></div><div class="river"></div><div class="park" style="left: 60px; top: 330px"></div></div>
+  <div class="tag" style="left: 132px; top: 290px; background: #4B4BC8; height: 40px; font-size: 17px; outline: 3px solid #F2F2F0"><i></i>Trivia</div>
+  <div class="tag" style="left: 226px; top: 224px; background: #E5B83B; color: #1A1405"><i style="background: #1F6B3A"></i>HH</div>
+  <div class="tag" style="left: 60px; top: 444px; background: #B33A80">9:00</div>
+  <div class="tag" style="left: 212px; top: 396px; background: #2A6FA8">9:30</div>
+  <div class="dot" style="left: 62px; top: 250px"></div><div class="dot" style="left: 120px; top: 210px"></div><div class="dot" style="left: 300px; top: 340px"></div><div class="dot" style="left: 160px; top: 520px"></div><div class="dot" style="left: 40px; top: 380px"></div>
+  <div class="me" style="left: 181px; top: 480px"></div>
+
+  <div style="position: absolute; left: 16px; right: 16px; top: 56px">
+    <div class="search"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg><span style="flex-grow: 1">Try "rooftop"</span><button type="button" class="sq" aria-label="Filters" style="color: #F2F2F0"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h10M18 7h2M4 17h4M12 17h8"/><circle cx="16" cy="7" r="2"/><circle cx="10" cy="17" r="2"/></svg></button></div>
+    <div style="margin-top: 10px; display: flex; gap: 6px"><button type="button" class="chip nowsel">On now 2</button><button type="button" class="chip">Tonight 4</button><button type="button" class="chip">All bars</button></div>
+  </div>
+
+  <div class="k k-trivia" style="position: absolute; left: 12px; right: 12px; bottom: 98px; height: 172px; border-radius: 22px; padding: 16px">
+    <div class="ghost" style="right: -10px; bottom: -30px; font-size: 110px; letter-spacing: -6px; color: #5E5EE0">WM</div>
+    <div style="position: relative; display: flex; justify-content: space-between"><span class="now"><i></i>ON NOW</span><span class="ink" style="font-size: 14px; font-weight: 600">4 min walk</span></div>
+    <div style="position: relative; margin-top: 12px"><div class="h2">Willie McBride's</div><div class="ink" style="margin-top: 4px; font-size: 14px">Trivia till 10 · then the late game · open till 2</div></div>
+    <div style="position: relative; margin-top: 12px; display: flex; gap: 8px"><button type="button" class="chip" style="background: #101114; color: #F2F2F0">Open bar page</button><button type="button" class="chip" style="background: rgba(16,17,20,0.35); color: #fff">Directions</button></div>
+  </div>
+
+  <nav class="tabbar">
+    <button type="button" class="tab"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/></svg>Tonight</button>
+    <button type="button" class="tab"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5z"/></svg>Discover</button>
+    <button type="button" class="tab on"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 4L3 6v14l6-2 6 2 6-2V4l-6 2z"/><path d="M9 4v14M15 6v14"/></svg>Map</button>
+    <button type="button" class="tab"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg>Profile</button>
+  </nav>
+</div>
+</body>
+</html>
