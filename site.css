@@ -9,7 +9,7 @@
   --line:rgba(255,255,255,.08);
   --tx:#F2F2F0; --tx2:#A9ABB2; --tx3:#8B8D94; --tx4:#5C5F68;
   --now:#8FC4A0; --on-now:#0E1A12;
-  --later:#E5A06F; --copper:#D58D5E; --on-copper:#170D08;
+  --later:#FF7A5C; --coral:#FF6B4A; --on-coral:#1A0A05;
   --trivia:#4B4BC8; --trivia-ink:#D5D5FA; --trivia-ghost:#5E5EE0;
   --karaoke:#B33A80; --karaoke-ink:#F7D5E8;
   --music:#2A6FA8; --music-ink:#D3E6F5;
@@ -42,14 +42,14 @@ ul{list-style:none}
 .later{height:26px;padding:0 9px;border-radius:8px;background:var(--bg);color:var(--later);font-size:12px;font-weight:700;letter-spacing:.04em;display:inline-flex;align-items:center}
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;text-decoration:none;font-family:var(--display);font-weight:800;border-radius:14px;transition:transform .15s ease,background .15s ease;white-space:nowrap}
 .btn:hover{transform:translateY(-1px)}
-.btn-store{background:var(--copper);color:var(--on-copper);font-size:20px;letter-spacing:-.01em;height:60px;padding:0 24px 0 20px}
-.btn-store:hover,.btn-copper:hover{background:#E09A6C}
+.btn-store{background:var(--coral);color:var(--on-coral);font-size:20px;letter-spacing:-.01em;height:60px;padding:0 24px 0 20px}
+.btn-store:hover,.btn-coral:hover{background:#FF8566}
 .btn-store svg{width:24px;height:24px;flex:none}
 .btn-store span{line-height:1.05;text-align:left}
 .btn-store small{display:block;font-family:var(--body);font-size:11px;font-weight:600;letter-spacing:.02em;opacity:.8}
 .btn-sm{height:44px;padding:0 16px;font-size:16px;font-weight:700;background:var(--s2);color:var(--tx)}
 .btn-sm:hover{background:var(--s3)}
-.btn-copper{background:var(--copper);color:var(--on-copper)}
+.btn-coral{background:var(--coral);color:var(--on-coral)}
 .btn-2{height:52px;padding:0 20px;font-size:17px;font-weight:700;background:var(--s2);color:var(--tx)}
 .btn-2:hover{background:var(--s3)}
 
@@ -125,12 +125,12 @@ section{padding:100px 0}
 .blk small{font-size:10px;font-weight:700;opacity:.85}
 
 /* member card */
-.card{position:relative;overflow:hidden;width:100%;max-width:440px;margin:0 auto;aspect-ratio:358/300;border-radius:28px;background:var(--copper);color:var(--on-copper);padding:24px;display:flex;flex-direction:column;justify-content:space-between;transform:rotate(-2deg)}
-.card .ghost{position:absolute;right:-.06em;bottom:-.24em;font-family:var(--display);font-weight:800;font-size:clamp(160px,22vw,250px);letter-spacing:-.06em;line-height:1;color:#CB8253;pointer-events:none}
+.card{position:relative;overflow:hidden;width:100%;max-width:440px;margin:0 auto;aspect-ratio:358/300;border-radius:28px;background:var(--coral);color:var(--on-coral);padding:24px;display:flex;flex-direction:column;justify-content:space-between;transform:rotate(-2deg)}
+.card .ghost{position:absolute;right:-.06em;bottom:-.24em;font-family:var(--display);font-weight:800;font-size:clamp(160px,22vw,250px);letter-spacing:-.06em;line-height:1;color:#F05C3B;pointer-events:none}
 .card-top,.card-body{position:relative}
 .card-top{display:flex;justify-content:space-between;align-items:center}
 .card-brand{font-family:var(--display);font-weight:800;font-size:34px;letter-spacing:-.05em}
-.card-badge{height:30px;padding:0 11px;border-radius:8px;background:var(--on-copper);color:#F2C3A1;font-size:12px;font-weight:700;letter-spacing:.08em;display:flex;align-items:center}
+.card-badge{height:30px;padding:0 11px;border-radius:8px;background:var(--on-coral);color:#FFC2B3;font-size:12px;font-weight:700;letter-spacing:.08em;display:flex;align-items:center}
 .card-label{font-size:13px;font-weight:700;letter-spacing:.1em}
 .card-no{font-family:var(--display);font-weight:800;font-size:clamp(72px,9vw,96px);letter-spacing:-.06em;line-height:.85}
 .card-name{margin-top:12px;font-size:17px;font-weight:700}

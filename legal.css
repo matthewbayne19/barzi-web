@@ -2,7 +2,7 @@
 @font-face{font-family:"Bricolage Grotesque";src:url(/fonts/BricolageGrotesque-opsz.woff2) format("woff2");font-weight:200 800;font-display:swap}
 @font-face{font-family:"DM Sans";src:url(/fonts/DMSans_400Regular.woff2) format("woff2");font-weight:400;font-display:swap}
 @font-face{font-family:"DM Sans";src:url(/fonts/DMSans_600SemiBold.woff2) format("woff2");font-weight:600 700;font-display:swap}
-:root{--bg:#101114;--s1:#1A1C21;--s2:#24272E;--s3:#2F333B;--line:rgba(255,255,255,.08);--text:#F2F2F0;--muted:#A9ABB2;--faint:#8B8D94;--copper:#D58D5E;--later:#E5A06F;--display:"Bricolage Grotesque","DM Sans",system-ui,sans-serif}
+:root{--bg:#101114;--s1:#1A1C21;--s2:#24272E;--s3:#2F333B;--line:rgba(255,255,255,.08);--text:#F2F2F0;--muted:#A9ABB2;--faint:#8B8D94;--coral:#FF6B4A;--later:#FF7A5C;--display:"Bricolage Grotesque","DM Sans",system-ui,sans-serif}
 *{box-sizing:border-box;margin:0;padding:0}
 html,body{background:var(--bg)}
 body{color:var(--text);font-family:"DM Sans",-apple-system,sans-serif;font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
