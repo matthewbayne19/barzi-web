@@ -35,7 +35,7 @@ export function Toasts() {
 }
 
 export function Brand({ big = false }: { big?: boolean }) {
-  return <div className={'brand' + (big ? ' big' : '')}><b>barzi</b><span>for bars</span></div>;
+  return <div className={'brand' + (big ? ' big' : '')}><img src="/brand/logo-c-white.svg" alt="barzi" /><span>for bars</span></div>;
 }
 
 export function Back({ to, label }: { to: string; label: string }) {
