@@ -136,7 +136,7 @@ section{padding:100px 0}
 .card-name{margin-top:12px;font-size:17px;font-weight:700}
 
 /* town */
-.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:44px}
+.stats{display:grid;grid-template-columns:repeat(2,1fr);max-width:760px;gap:10px;margin-top:44px}
 .stat{background:var(--s1);border-radius:18px;padding:22px}
 .stat b{display:block;font-family:var(--display);font-weight:800;font-size:clamp(48px,6vw,80px);letter-spacing:-.05em;line-height:.9;margin-bottom:10px}
 .stat span{color:var(--tx2);font-size:15px}
