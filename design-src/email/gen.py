@@ -1,0 +1,41 @@
+# Generates the Supabase auth email templates for barzi for bars (gig poster style).
+# Paste the output into Supabase > Authentication > Emails > Templates.
+HEAD = '''<!doctype html>
+<html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="dark"><meta name="supported-color-schemes" content="dark">
+<style>@font-face{font-family:"Bricolage Grotesque";src:url(https://www.gobarzi.com/fonts/BricolageGrotesque-opsz.woff2) format("woff2");font-weight:200 800}</style></head>
+<body style="margin:0;padding:0;background:#101114;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#101114" style="background:#101114;">
+<tr><td align="center" style="padding:32px 16px;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="max-width:440px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;">
+  <tr><td style="padding:0 4px 20px;">
+    <table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr>
+      <td style="padding-right:10px;"><img src="https://www.gobarzi.com/img/icon-192.png" width="36" height="36" alt="" style="display:block;border-radius:9px;border:0;"></td>
+      <td style="font-family:'Bricolage Grotesque',-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;font-size:26px;font-weight:800;letter-spacing:-1px;color:#F2F2F0;padding-right:10px;">barzi</td>
+      <td><span style="display:inline-block;background:#24272E;color:#F2F2F0;border-radius:8px;padding:4px 9px;font-size:13px;font-weight:700;">for bars</span></td>
+    </tr></table>
+  </td></tr>
+'''
+DISPLAY = "font-family:'Bricolage Grotesque',-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;"
+def page(title, lede):
+    return HEAD + f'''  <tr><td bgcolor="#1A1C21" style="background:#1A1C21;border-radius:18px;padding:28px 24px;">
+    <div style="{DISPLAY}font-size:28px;line-height:30px;font-weight:800;letter-spacing:-1px;color:#F2F2F0;margin:0 0 10px;">{title}</div>
+    <div style="font-size:15px;line-height:22px;color:#A9ABB2;margin:0 0 22px;">{lede}</div>
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr>
+      <td align="center" bgcolor="#4B4BC8" style="background:#4B4BC8;border-radius:18px;padding:20px 8px;{DISPLAY}font-size:40px;font-weight:800;letter-spacing:10px;color:#FFFFFF;">{{{{ .Token }}}}</td>
+    </tr></table>
+    <div style="font-size:13px;line-height:20px;color:#8B8D94;margin:14px 0 24px;text-align:center;">Works once and expires soon.</div>
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr>
+      <td align="center" bgcolor="#FF6B4A" style="background:#FF6B4A;border-radius:14px;"><a href="{{{{ .ConfirmationURL }}}}" style="display:block;padding:16px;{DISPLAY}font-size:17px;font-weight:800;color:#1A0A05;text-decoration:none;">Or sign in on this device</a></td>
+    </tr></table>
+  </td></tr>
+  <tr><td style="padding:20px 4px 0;font-size:13px;line-height:20px;color:#8B8D94;">
+    Didn't ask for this? You can ignore this email. Nobody can sign in without the code.<br><br>
+    Questions? Email <a href="mailto:hello@baynestudio.com" style="color:#FF7A5C;text-decoration:none;">hello@baynestudio.com</a><br>
+    <span style="color:#5C5F68;">barzi · What's up tonight in Hoboken · <a href="https://www.gobarzi.com" style="color:#5C5F68;">gobarzi.com</a></span>
+  </td></tr>
+</table>
+</td></tr></table>
+</body></html>
+'''
+open('magic-link.html','w').write(page('Your sign-in code', "Type this on the barzi for bars sign-in page to manage your bar's page."))
+open('confirm-signup.html','w').write(page('Welcome to barzi for bars', "Here's your first sign-in code. Type it on the sign-in page to start managing your bar's page on barzi."))
