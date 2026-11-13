@@ -88,7 +88,7 @@ ul{list-style:none}
 .stub em{font-style:normal;font-weight:700;font-size:15px}
 .stub .ic{width:28px;height:28px;margin-bottom:12px}
 .s1{right:-28px;top:80px;transform:rotate(5deg)}
-.s2{left:-16px;top:280px;transform:rotate(-6deg);width:160px}
+.s2{left:-16px;top:430px;transform:rotate(-6deg);width:160px}
 .s3{right:-20px;bottom:30px;transform:rotate(3deg)}
 
 /* sections */
@@ -188,7 +188,7 @@ footer{border-top:1px solid var(--line);padding:30px 0 50px;color:var(--tx3);fon
   .stub b{font-size:30px}
   .stub em{font-size:13px}
   .stub .later{margin-bottom:6px}
-  .s2{width:124px;top:220px;left:0}
+  .s2{width:124px;top:320px;left:0}
   .s1{top:40px;right:0}
   .s3{right:0}
   .tabs{gap:36px 14px}
@@ -212,3 +212,8 @@ footer{border-top:1px solid var(--line);padding:30px 0 50px;color:var(--tx3);fon
 .top{overflow-x:clip}
 .brand img{height:30px;width:auto;display:block}
 .sticky-brand{height:24px;width:auto;display:block}
+.place .feats{margin-top:0;max-width:none;gap:10px}
+.place .feats li{padding:18px 16px;font-size:17px}
+.plan .ticks{margin-top:0;gap:18px}
+.plan .ticks li{font-size:17px}
+@media (max-width:880px){.split .copy{order:0}}
