@@ -217,3 +217,9 @@ footer{border-top:1px solid var(--line);padding:30px 0 50px;color:var(--tx3);fon
 .plan .ticks{margin-top:0;gap:18px}
 .plan .ticks li{font-size:17px}
 @media (max-width:880px){.split .copy{order:0}}
+/* sticky bar: keep "What's up tonight" whole on phones */
+.sticky{gap:8px;padding:8px 8px 8px 14px}
+.sticky-brand{height:20px}
+.sticky-txt{font-size:13px;overflow:visible;text-overflow:clip}
+.sticky .btn-sm{padding:0 14px;font-size:15px}
+@media (max-width:359px){.sticky-txt{display:none}.sticky{justify-content:space-between}}
