@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Tonight on now</title>
+<link rel="stylesheet" href="gig.css"><link rel="stylesheet" href="fonts.css">
+</head>
+<body>
+<style>body{margin:0}</style>
+<div class="scr pad">
+  <div style="display: flex; justify-content: space-between; align-items: flex-end; padding: 0 4px">
+    <h1 class="h1">What's up</h1>
+    <button type="button" class="sq" aria-label="Filter"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h10M18 7h2M4 17h4M12 17h8"/><circle cx="16" cy="7" r="2"/><circle cx="10" cy="17" r="2"/></svg></button>
+  </div>
+  <div class="bq" style="margin-top: 14px; padding: 0 4px; display: flex; gap: 16px; align-items: baseline; font-weight: 700; font-size: 18px; color: #5C5F68">
+    <span style="color: #F2F2F0; font-size: 22px; border-bottom: 3px solid #F2F2F0; padding-bottom: 2px">Tonight</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span>
+  </div>
+
+  <div class="k k-trivia" style="margin-top: 18px; height: 236px; border-radius: 22px; padding: 18px">
+    <div class="ghost" style="left: -8px; bottom: -34px; font-size: 132px; letter-spacing: -7px; color: #5E5EE0">TRIVIA</div>
+    <div style="position: relative; display: flex; justify-content: space-between; align-items: center">
+      <span class="now" style="height: 30px; font-size: 13px"><i></i>ON NOW</span>
+      <button type="button" aria-label="Share" style="width: 40px; height: 40px; border-radius: 20px; border: 0; background: rgba(16,17,20,0.35); color: #fff; display: flex; align-items: center; justify-content: center"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12M7 8l5-5 5 5"/><path d="M5 13v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6"/></svg></button>
+    </div>
+    <div style="position: relative; margin-top: 14px">
+      <div class="big" style="font-size: 40px">8–10 PM</div>
+      <div style="margin-top: 6px; font-size: 17px; font-weight: 700">Willie McBride's</div>
+      <div class="ink" style="font-size: 14px">4 min walk · teams up to 6</div>
+    </div>
+  </div>
+
+  <div style="margin-top: 10px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px">
+    <div class="k k-karaoke" style="height: 150px; display: flex; flex-direction: column; justify-content: space-between"><span class="later" style="align-self: flex-start">LATER</span><div><div class="big" style="font-size: 38px">9:00</div><div style="margin-top: 6px; font-size: 15px; font-weight: 700">Karaoke</div><div class="ink" style="font-size: 13px">Mulligan's · 6 min</div></div></div>
+    <div class="k k-music" style="height: 150px; display: flex; flex-direction: column; justify-content: space-between"><span class="later" style="align-self: flex-start">LATER</span><div><div class="big" style="font-size: 38px">9:30</div><div style="margin-top: 6px; font-size: 15px; font-weight: 700">Live music</div><div class="ink" style="font-size: 13px">Ale House · 3 min</div></div></div>
+    <div class="k k-hh" style="height: 150px; display: flex; flex-direction: column; justify-content: space-between"><span class="later" style="align-self: flex-start">LATER</span><div><div class="big" style="font-size: 38px">10:00</div><div style="margin-top: 6px; font-size: 15px; font-weight: 700">Late happy hour</div><div class="ink" style="font-size: 13px">Moran's · 8 min</div></div></div>
+    <div class="k" style="height: 150px; background: #1A1C21; display: flex; flex-direction: column; justify-content: center"><div class="big" style="font-size: 38px">+3</div><div style="margin-top: 6px; font-size: 15px; font-weight: 600; color: #A9ABB2">more tonight</div></div>
+  </div>
+
+  <nav class="tabbar">
+    <button type="button" class="tab on"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/></svg>Tonight</button>
+    <button type="button" class="tab"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5z"/></svg>Discover</button>
+    <button type="button" class="tab"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 4L3 6v14l6-2 6 2 6-2V4l-6 2z"/><path d="M9 4v14M15 6v14"/></svg>Map</button>
+    <button type="button" class="tab"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg>Profile</button>
+  </nav>
+</div>
+</body>
+</html>
