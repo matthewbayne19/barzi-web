@@ -210,3 +210,5 @@ footer{border-top:1px solid var(--line);padding:30px 0 50px;color:var(--tx3);fon
   footer{padding-bottom:calc(100px + env(safe-area-inset-bottom))}
 }
 .top{overflow-x:clip}
+.brand img{height:30px;width:auto;display:block}
+.sticky-brand{height:24px;width:auto;display:block}

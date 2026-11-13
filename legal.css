@@ -33,3 +33,4 @@ footer a:hover{color:var(--text)}
 .forbars>p{color:var(--muted);margin-bottom:16px}
 .forbars section:first-of-type{border-top:1px solid var(--line)}
 @media (max-width:560px){.forbars{padding:20px 16px 2px}}
+.brand img{height:28px;width:auto;display:block}
