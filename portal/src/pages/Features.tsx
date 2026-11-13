@@ -9,7 +9,7 @@ import { Back, ErrorBox, toast } from '../ui';
 const GROUPS: { title: string; keys: [string, string][] }[] = [
   { title: 'Games', keys: [['pool', 'Pool'], ['darts', 'Darts'], ['shuffleboard', 'Shuffleboard'], ['arcade', 'Arcade'], ['board_games', 'Board games']] },
   { title: 'Setting', keys: [['outdoor_seating', 'Outdoor seating'], ['rooftop', 'Rooftop'], ['dog_friendly', 'Dog-friendly']] },
-  { title: 'Also here', keys: [['touchtunes', 'Jukebox'], ['photobooth', 'Photobooth']] },
+  { title: 'Also here', keys: [['touchtunes', 'TouchTunes'], ['photobooth', 'Photobooth']] },
 ];
 const LABEL = Object.fromEntries(GROUPS.flatMap((g) => g.keys));
 const SHOWN = new Set(Object.keys(LABEL));

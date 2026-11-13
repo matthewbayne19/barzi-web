@@ -113,7 +113,7 @@ export function Home({ data, manyBars }: { data: BarData; manyBars: boolean }) {
         {row('details', 'Details and links', 'Phone, website, Instagram')}
       </nav>
 
-      <button type="button" className="item" style={{ border: '1px solid var(--line)', borderRadius: 12, background: 'var(--surface)', padding: 16 }} onClick={() => navigate('stats')}>
+      <button type="button" className="item" style={{ border: 0, borderRadius: 18, background: 'var(--surface)', padding: 16 }} onClick={() => navigate('stats')}>
         <span className="main"><span className="label">Your page on barzi</span><span className="meta">Views, directions and taps</span></span>
         <span className="later" style={{ fontSize: 14 }}>Stats</span>
       </button>
