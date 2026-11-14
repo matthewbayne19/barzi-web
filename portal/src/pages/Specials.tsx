@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import type { Bar } from '../data';
 import { DAYS, SPECIAL_KINDS, daysText, hhmm, kindName, timeRange } from '../format';
+import { openToClose } from '../openToClose';
 import { message, supabase, type SpecialRow } from '../supabase';
 import { Back, Chips, DaysPicker, ErrorBox, Field, navigate, toast } from '../ui';
 
@@ -48,6 +49,14 @@ export function SpecialEditor({ bar, id }: { bar: Bar; id: string }) {
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const set = <K extends keyof Draft>(k: K, v: Draft[K]) => setF((x) => ({ ...x, [k]: v }));
+  const [fillNote, setFillNote] = useState<string | null>(null);
+  const hoursFor = (day: string) => d.hours.find((h) => h.day_of_week === day);
+  // Starts when you open and ends when you close, from your hours on these days
+  const fillOpenToClose = () => {
+    const r = openToClose(f.days, hoursFor);
+    setFillNote(r.note);
+    if (r.start) setF((x) => ({ ...x, start_time: r.start!, end_time: r.end ?? '' }));
+  };
 
   if (id !== 'new' && !existing) {
     return <><Back to="specials" label="Specials" /><div className="empty">That special isn't on your page any more.</div></>;
@@ -96,6 +105,8 @@ export function SpecialEditor({ bar, id }: { bar: Bar; id: string }) {
         <Field label="Starts" hint="optional"><input className="text" type="time" step={900} value={f.start_time} onChange={(e) => set('start_time', e.target.value)} /></Field>
         <Field label="Ends" hint="optional"><input className="text" type="time" step={900} value={f.end_time} onChange={(e) => set('end_time', e.target.value)} /></Field>
       </div>
+      <button type="button" className="btn small" onClick={fillOpenToClose}>Open to close</button>
+      {fillNote && <p className="small">{fillNote}</p>}
       <ErrorBox error={error} />
       <div className="row">
         {existing && <button type="button" className="btn danger" disabled={busy} onClick={remove}>Remove</button>}

@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import type { Bar } from '../data';
 import { DAYS, EVENT_KINDS, dateText, daysText, hhmm, kindName, timeRange, todayISO } from '../format';
+import { openToClose, weekdayOf } from '../openToClose';
 import { message, supabase, type EventRow } from '../supabase';
 import { Back, Chips, DaysPicker, ErrorBox, Field, Seg, navigate, toast } from '../ui';
 
@@ -66,6 +67,15 @@ export function NightEditor({ bar, id }: { bar: Bar; id: string }) {
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const set = <K extends keyof Draft>(k: K, v: Draft[K]) => setF((x) => ({ ...x, [k]: v }));
+  const [fillNote, setFillNote] = useState<string | null>(null);
+  const hoursFor = (day: string) => d.hours.find((h) => h.day_of_week === day);
+  // Starts when you open and runs until close, from your hours on these days
+  const fillOpenToClose = () => {
+    const days = f.mode === 'date' ? (f.event_date ? [weekdayOf(f.event_date)] : []) : f.days;
+    const r = openToClose(days, hoursFor);
+    setFillNote(r.note);
+    if (r.start) setF((x) => ({ ...x, start_time: r.start!, end_time: '', ends_at_close: true }));
+  };
 
   if (id !== 'new' && !existing) {
     return <><Back to="nights" label="Nights and events" /><div className="empty">That night isn't on your page any more.</div></>;
@@ -140,6 +150,8 @@ export function NightEditor({ bar, id }: { bar: Bar; id: string }) {
         <Field label="Ends"><input className="text" type="time" step={900} value={f.ends_at_close ? '' : f.end_time} disabled={f.ends_at_close} onChange={(e) => set('end_time', e.target.value)} /></Field>
       </div>
       <label className="check"><input type="checkbox" checked={f.ends_at_close} onChange={(e) => set('ends_at_close', e.target.checked)} />Runs until close</label>
+      <button type="button" className="btn small" onClick={fillOpenToClose}>Open to close</button>
+      {fillNote && <p className="small">{fillNote}</p>}
       <div className="grid2">
         <Field label="Host or DJ" hint="optional"><input className="text" maxLength={60} value={f.host} onChange={(e) => set('host', e.target.value)} /></Field>
         <Field label="Cover $" hint="optional"><input className="text" inputMode="decimal" value={f.cover} onChange={(e) => set('cover', e.target.value.replace(/[^\d.]/g, ''))} placeholder="None" /></Field>
