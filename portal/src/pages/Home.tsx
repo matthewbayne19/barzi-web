@@ -113,11 +113,6 @@ export function Home({ data, manyBars }: { data: BarData; manyBars: boolean }) {
         {row('details', 'Details and links', 'Phone, website, Instagram')}
       </nav>
 
-      <button type="button" className="item" style={{ border: 0, borderRadius: 18, background: 'var(--surface)', padding: 16 }} onClick={() => navigate('stats')}>
-        <span className="main"><span className="label">Your page on barzi</span><span className="meta">Views, directions and taps</span></span>
-        <span className="later" style={{ fontSize: 14 }}>Stats</span>
-      </button>
-
       <p className="small center">
         Need your name, address or map pin changed? Email <a href="mailto:hello@baynestudio.com?subject=Change%20for%20my%20bar">hello@baynestudio.com</a>
         <br />{plural(data.events.length + data.specials.length, 'listing')} on your page
