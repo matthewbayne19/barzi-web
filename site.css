@@ -226,3 +226,4 @@ footer{border-top:1px solid var(--line);padding:30px 0 50px;color:var(--tx3);fon
 .sticky-line{flex:1;min-width:0;display:flex;align-items:baseline;gap:8px}
 .sticky-line .sticky-txt{flex:none;line-height:1}
 .sticky-line .sticky-brand{flex:none}
+.sticky{justify-content:space-between}
